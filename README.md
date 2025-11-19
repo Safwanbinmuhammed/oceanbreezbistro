@@ -22,3 +22,22 @@ MenuItem.jsx: The core reusable component. It accepts props (image, name, price,
 
 Footer.jsx: Displays copyright and footer links.
 
+* Run Locally
+
+Follow these steps to run the project on your local machine:
+
+Clone the repository
+
+git clone : https://github.com/Safwanbinmuhammed/oceanbreezbistro.git
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Open in Browser:
+
+Click the link provided in the terminal to view the app.
