@@ -1,0 +1,113 @@
+/* -------------------------------------
+   🎨 LUXURY DARK THEME VARIABLES
+-------------------------------------*/
+:root {
+  /* Colors */
+  --color-dark-bg: #111111;
+  --color-dark-card: #1c1c1c;
+  --color-dark-border: #333333;
+  --color-primary-gold: #D4AF37; /* A richer, deeper gold */
+  --color-secondary-cream: #f1e6d1;
+  --color-text-light: #eeeeee;
+  --color-text-subtle: #b8b8b8;
+  --color-veg: #4CAF50; /* Slightly more professional green */
+
+  /* Spacing */
+  --spacing-unit: 8px;
+  --padding-card: calc(var(--spacing-unit) * 3); /* 24px */
+  --margin-bottom: calc(var(--spacing-unit) * 3); /* 24px */
+
+  /* Transitions */
+  --transition-speed: 0.4s;
+}
+
+/* -------------------------------------
+   ✨ MENU ITEM COMPONENT (Luxury Enhanced)
+-------------------------------------*/
+
+.menu-item {
+  /* Card Base */
+  background-color: var(--color-dark-card);
+  border: 1px solid var(--color-dark-border);
+  border-radius: 12px; /* Slightly tighter than 15px */
+  padding: var(--padding-card);
+  margin-bottom: var(--margin-bottom);
+  
+  /* Initial Luxury Shadow (Subtle lift) */
+  box-shadow: 
+    0 4px 10px rgba(0, 0, 0, 0.4),
+    0 0 8px rgba(212, 175, 55, 0.05); /* Subtle gold hint */
+
+  /* Transition for smoother effects */
+  transition: 
+    transform var(--transition-speed) ease-in-out, 
+    border-color var(--transition-speed) ease-in-out,
+    box-shadow var(--transition-speed) ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-8px); /* More pronounced lift */
+  border-color: var(--color-primary-gold);
+  
+  /* Enhanced Hover Shadow */
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(212, 175, 55, 0.2); /* More visible gold glow */
+}
+
+/* -------------------------------------
+   📜 TEXT ELEMENTS (BEM-like Naming)
+-------------------------------------*/
+
+.menu-item__name {
+  font-family: 'Playfair Display', Georgia, serif; /* Premium Font */
+  font-size: 1.8rem; /* Slightly larger */
+  font-weight: 700;
+  color: var(--color-secondary-cream);
+  margin: 0 0 calc(var(--spacing-unit) / 2);
+  line-height: 1.2;
+}
+
+.menu-item__desc {
+  font-family: 'Montserrat', sans-serif; /* Readable sans-serif for body */
+  color: var(--color-text-subtle);
+  margin: var(--spacing-unit) 0;
+  font-size: 1.05rem; /* Slightly bigger for readability */
+  line-height: 1.5;
+}
+
+.menu-item__price {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem; /* More impactful size */
+  color: var(--color-primary-gold);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  display: block; /* Ensures it sits on its own line */
+  margin-top: var(--spacing-unit);
+}
+
+/* -------------------------------------
+   🌿 VEGETARIAN BADGE
+-------------------------------------*/
+
+.menu-item__badge--veg {
+  display: inline-flex; /* Use flex for better vertical alignment */
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background-color: var(--color-veg);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: var(--spacing-unit) * 2; /* Separated from name */
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.4);
+  /* Optional: Add a simple circle for the veg mark */
+}
+
+.menu-item__badge--veg::before {
+    content: "•"; /* Dot for the veg mark */
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-right: 4px;
+}
